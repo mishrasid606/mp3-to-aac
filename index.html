@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 to AAC Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">MP3 to AAC Converter</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4 shadow-sm">
+                    <div class="mb-3">
+                        <label for="mp3Input" class="form-label">Select an MP3 File</label>
+                        <input class="form-control" type="file" id="mp3Input" accept=".mp3">
+                    </div>
+                    <button id="convertButton" class="btn btn-primary w-100">Convert to AAC</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <div id="result" class="text-center"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('convertButton').addEventListener('click', function() {
+            const mp3Input = document.getElementById('mp3Input');
+            const result = document.getElementById('result');
+
+            if (mp3Input.files && mp3Input.files[0]) {
+                const file = mp3Input.files[0];
+                
+                // Placeholder for conversion process
+                result.innerHTML = `<div class="alert alert-warning">MP3 to AAC conversion is not supported in the browser. Please use a server-side tool like FFmpeg.</div>`;
+            }
+        });
+    </script>
+</body>
+</html>
